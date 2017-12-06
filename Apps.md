@@ -260,7 +260,7 @@ Update endpoint for beacons.  Parameters are:
   <tr>
     <td>"filterIncludes"</td>
     <td>true</td>
-    <td>Boolean - Optional. Only relevant if app's `filterLevel` is `ACCOUNT`. If false, the touchpoint will not appear in that app.</td>
+    <td>Boolean - Optional. Only relevant if app's filterLevel is ACCOUNT. If false, the touchpoint will not appear in that app.</td>
   </tr>
 </table>
 
