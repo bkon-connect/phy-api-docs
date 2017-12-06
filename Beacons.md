@@ -201,37 +201,37 @@ Update endpoint for beacons.  Parameters are:
   <tr>
     <td>"redirectUrl"</td>
     <td>"https://google.com"</td>
-    <td>`String` - Required.</td>
+    <td>String - Required.</td>
   </tr>
   <tr>
     <td>"desc"</td>
     <td>"Description of the beacon"</td>
-    <td>`String` - Optional.</td>
+    <td>String - Optional.</td>
   </tr>
   <tr>
     <td>"destination"</td>
     <td>"aefoiawe123"</td>
-    <td>`ObjectId` of `Destination` instance - Optional.</td>
+    <td>ObjectId of Destination instance - Optional.</td>
   </tr>
   <tr>
     <td>"disabled"</td>
     <td>true</td>
-    <td>`Boolean` defaults to false.  Optional.</td>
+    <td>Boolean defaults to false.  Optional.</td>
   </tr>
   <tr>
     <td>"install"</td>
     <td><pre>{<br>  brand,<br>  source,<br>  locationType,<br>  locationName,<br>  locationAddress,<br>  details,<br>  photo: {<br>    immediate,<br>    close,<br>    far,<br>  }<br>}</pre></td>
-    <td>All except `photo` are type `String` including the `photo` properties.  All are Optional.</td>
+    <td>All except photo are type String including the photo properties.  All are Optional.</td>
   </tr>
   <tr>
     <td>"urlTags"</td>
     <td><pre>{<br>  "custom": [<br>    {<br>      "key": "",<br>      "value: "",<br>      "active": false<br>    },<br>  "phyTimeActive": false,<br>  "phyIDActive": false<br>}<br></pre></td>
-    <td>`custom` is an array of objects which contain:<br><br>(a) "key" - `String` optional<br>(b) "value" - `String` optional<br>(c) "active" - `Boolean` defaults to false.  Optional<br><br>"phyTimeActive" - `Boolean` defaults to false<br>"phyIDActive" - `Boolean` defaults to false</td>
+    <td>custom is an array of objects which contain:<br><br>(a) "key" - String optional<br>(b) "value" - String optional<br>(c) "active" - Boolean defaults to false.  Optional<br><br>"phyTimeActive" - Boolean defaults to false<br>"phyIDActive" - Boolean defaults to false</td>
   </tr>
   <tr>
     <td>"metaMessageActive"</td>
     <td>true</td>
-    <td>`Boolean` - Optional.</td>
+    <td>Boolean - Optional.</td>
   </tr>
   <tr>
     <td>"metaMessage"</td>
@@ -261,49 +261,48 @@ Parameter Options:
   <tr>
     <td class="tg-yw4l">"redirectUrl"</td>
     <td class="tg-yw4l">"https://google.com"</td>
-    <td class="tg-yw4l">`String` - Required.</td>
+    <td class="tg-yw4l">String - Required.</td>
   </tr>
   <tr>
     <td class="tg-yw4l">"desc"</td>
     <td class="tg-yw4l">"Description of the beacon"</td>
-    <td class="tg-yw4l">`String` - Optional.</td>
+    <td class="tg-yw4l">String - Optional.</td>
   </tr>
   <tr>
     <td class="tg-yw4l">"destination"</td>
     <td class="tg-yw4l">"aefoiawe123"</td>
-    <td class="tg-yw4l">`ObjectId` of `Destination` instance - Optional.</td>
+    <td class="tg-yw4l">ObjectId of Destination instance - Optional.</td>
   </tr>
   <tr>
     <td class="tg-yw4l">"disabled"</td>
     <td class="tg-yw4l">true</td>
-    <td class="tg-yw4l">`Boolean` defaults to false.  Optional.</td>
+    <td class="tg-yw4l">Boolean defaults to false.  Optional.</td>
   </tr>
   <tr>
     <td class="tg-yw4l">"install"</td>
-    <td class="tg-yw4l">`{`<br>
-        `"brand": "BKON",`<br>
-        `"details": "",`<br>
-        `"locationAddress": "",`<br>
-        `"locationName": "jhggjhk",`<br>
-        `"source": "Alk",`<br>
-        `"photo": {`<br>
-        `    "close": "",`<br>
-        `    "far": "",`<br>
-        `    "immediate": ""`<br>
-        `}`<br>
-        `}`
-        </td>
-    <td class="tg-yw4l">All except `photo` are type `String` including the `photo` properties.  All are Optional.</td>
+    <td class="tg-yw4l"><pre>{<br>
+        "brand": "BKON",<br>
+        "details": "",<br>
+        "locationAddress": "",<br>
+        "locationName": "jhggjhk",<br>
+        "source": "Alk",<br>
+        "photo": {<br>
+            "close": "",<br>
+            "far": "",<br>
+            "immediate": ""<br>
+        }<br>
+        }</pre></td>
+    <td class="tg-yw4l">All except photo are type String including the photo properties.  All are Optional.</td>
   </tr>
   <tr>
     <td class="tg-yw4l">"urlTags"</td>
     <td class="tg-yw4l"><pre>{<br>  "custom": [<br>    {<br>      "key": "",<br>      "value: "",<br>      "active": false<br>    }],<br>  "phyTimeActive": false,<br>  "phyIDActive": false<br>}<br></pre></td>
-    <td class="tg-yw4l">`custom` is an array of objects which contain:<br><br>(a) "key" - `String` optional<br>(b) "value" - `String` optional<br>(c) "active" - `Boolean` defaults to false.  Optional<br><br>"phyTimeActive" - `Boolean` defaults to false<br>"phyIDActive" - `Boolean` defaults to false</td>
+    <td class="tg-yw4l">custom is an array of objects which contain:<br><br>(a) "key" - String optional<br>(b) "value" - String optional<br>(c) "active" - Boolean defaults to false.  Optional<br><br>"phyTimeActive" - Boolean defaults to false<br>"phyIDActive" - Boolean defaults to false</td>
   </tr>
   <tr>
     <td class="tg-yw4l">"metaMessageActive"</td>
     <td class="tg-yw4l">true</td>
-    <td class="tg-yw4l">`Boolean` - Optional.</td>
+    <td class="tg-yw4l">Boolean - Optional.</td>
   </tr>
   <tr>
     <td class="tg-yw4l">"metaMessage"</td>
@@ -314,7 +313,7 @@ Parameter Options:
 
 Example response:
 
-`200` status code.  If the client requires a refresh of the beacons, do a fetch from the `/api/v2/beacons/ endpoint.
+`200` status code.  If the client requires a refresh of the beacons, do a fetch from the `/api/v2/beacons/ endpoint`.
 
 ```
 {
