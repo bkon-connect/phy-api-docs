@@ -230,37 +230,37 @@ Update endpoint for beacons.  Parameters are:
   <tr>
     <td>"url"</td>
     <td>"https://google.com"</td>
-    <td>`String` - Required.</td>
+    <td>String - Required.</td>
   </tr>
   <tr>
     <td>"notes"</td>
     <td>"Description of the beacon"</td>
-    <td>`String` - Optional.</td>
+    <td>String - Optional.</td>
   </tr>
   <tr>
     <td>"destination"</td>
     <td>"aefoiawe123"</td>
-    <td>`ObjectId` of `Destination` instance - Optional.</td>
+    <td>ObjectId of `Destination` instance - Optional.</td>
   </tr>
   <tr>
     <td>"deactivated"</td>
     <td>true</td>
-    <td>`Boolean` - Optional. If false, the beacon will follow alternate redirection rules as defined here.</td>
+    <td>Boolean - Optional. If false, the beacon will follow alternate redirection rules as defined here.</td>
   </tr>
   <tr>
     <td>"persistent"</td>
     <td>true</td>
-    <td>`Boolean` - Optional. If true, the beacon will always show within the app</td>
+    <td>Boolean - Optional. If true, the beacon will always show within the app</td>
   </tr>
   <tr>
     <td>"persistentPosition"</td>
     <td>true</td>
-    <td>`String` - Options: 'above', 'below'. Determines whether a persistent touchpoint shows above or below non-persistent touchpoints. </td>
+    <td>String - Options: 'above', 'below'. Determines whether a persistent touchpoint shows above or below non-persistent touchpoints. </td>
   </tr>
   <tr>
     <td>"filterIncludes"</td>
     <td>true</td>
-    <td>`Boolean` - Optional. Only relevant if app's `filterLevel` is `ACCOUNT`. If false, the touchpoint will not appear in that app.</td>
+    <td>Boolean - Optional. Only relevant if app's `filterLevel` is `ACCOUNT`. If false, the touchpoint will not appear in that app.</td>
   </tr>
 </table>
 
