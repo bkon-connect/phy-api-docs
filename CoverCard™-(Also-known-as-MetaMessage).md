@@ -21,21 +21,21 @@ A `Meta Message` can be passed the following arguments:
   <tr>
     <td>"title"</td>
     <td>"The title displayed on the Meta Message page"</td>
-    <td>`String` - Required.</td>
+    <td>String - Required.</td>
   </tr>
   <tr>
     <td>"description"</td>
     <td>"The description that displays on the meta message page"</td>
-    <td>`String` - Required.</td>
+    <td>String - Required.</td>
   </tr>
   <tr>
     <td>"faviconUrl"</td>
     <td>"https://url.to.some.favicon"</td>
-    <td>`String` - Optional.</td>
+    <td>String - Optional.</td>
   </tr>
   <tr>
     <td>"imageUrl"</td>
     <td>"https://url.to.another.image"</td>
-    <td>`String` - Optional.</td>
+    <td>String - Optional.</td>
   </tr>
 </table>
