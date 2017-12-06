@@ -240,7 +240,7 @@ Update endpoint for beacons.  Parameters are:
   <tr>
     <td>"destination"</td>
     <td>"aefoiawe123"</td>
-    <td>ObjectId of `Destination` instance - Optional.</td>
+    <td>ObjectId of Destination instance - Optional.</td>
   </tr>
   <tr>
     <td>"deactivated"</td>
