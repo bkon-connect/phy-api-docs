@@ -76,7 +76,7 @@ Example payload:
         "tapActionActive": false,
         "metaMessageActive": true,
         "name": "micro-event"
-    },
+    }
 }
 ```
 
@@ -90,14 +90,14 @@ Arguments:
 |:---:|:---|:---:|
 |"name"|"Name of event"|`String` - Optional but Recomended|
 |"redirectUrl"|"https://www.google.com"|`String` - defaults to 'https://phy.net/setup'. Required.|
-|"metaMessage"|<pre>{<br>"title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional.  See CoverCard™ (also known as MetaMessage) API docs for more options|
+|"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional. See CoverCard™ (also known as MetaMessage) API docs for more options|
 |"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
 |"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`|
-|"start"|["2016-05-15", "09:00"]|`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm'].  Required.|
-|"stop"|["2016-05-16", "09:00"]|`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm'].  Required.|
-|"timezone"|"America/Los_Angeles"|`String` - Defaults to UTC. Required.  For options see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones and use the `TZ` column|
-|"beacons"|["123test", "456test"]|`Array` of `String` items - requires an array of Beacon IDs.  Required.|
-|"destination"|"43951ajdsflka3241"|`String` (technically a Mongo ObjectId).  Id of a destination to bind to this event.  Optional.|
+|"start"|\["2016-05-15", "09:00"\]|`Array` of `String` items - takes a format of \['yyyy-mm-dd', 'hh:mm'\].  Required.|
+|"stop"|\["2016-05-16", "09:00"\]|`Array` of `String` items - takes a format of \['yyyy-mm-dd', 'hh:mm'\].  Required.|
+|"timezone"|"America/Los_Angeles"|`String` - Defaults to UTC. Required.  For options see the [list of TZ database times zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) and use the `TZ` column|
+|"beacons"|\["123test", "456test"\]|`Array` of `String` items - requires an array of Beacon IDs.  Required.|
+|"destination"|"43951ajdsflka3241"|`String` (technically a Mongo ObjectId). Id of a destination to bind to this event.  Optional.|
 
 Example Payload without `Meta Message`:
 ```
@@ -153,13 +153,13 @@ Arguments
 |:---:|:---|:---:|
 |"name"|"Name of event"|`String` - Optional but Highly Recommended.|
 |"redirectUrl"|"https://www.google.com"|`String` - defaults to 'https://phy.net/setup'. Required.|
-|"metaMessage"|<pre>{<br>"title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional.  See CoverCard™ (also known as MetaMessage) API docs for more options|
+|"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional. See CoverCard™ (also known as MetaMessage) API docs for more options|
 |"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
 |"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`. Optional after set once.|
-|"start"|["2016-05-15", "09:00"]|`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm']. Required.|
-|"stop"|["2016-05-16", "09:00"]|`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm'].  Required.|
-|"timezone"|"America/Los_Angeles"|`String` - Defaults to UTC. Required.  For options see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones and use the `TZ` column|
-|"beacons"|["123test", "456test"]|`Array` of `String` items - takes an array of Beacon IDs.  Required.|
+|"start"|\["2016-05-15", "09:00"\]|`Array` of `String` items - takes a format of \['yyyy-mm-dd', 'hh:mm'\]. Required.|
+|"stop"|\["2016-05-16", "09:00"\]|`Array` of `String` items - takes a format of \['yyyy-mm-dd', 'hh:mm'\].  Required.|
+|"timezone"|"America/Los_Angeles"|`String` - Defaults to UTC. Required.  For options use the [list of TZ database times zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) and use the `TZ` column|
+|"beacons"|\["123test", "456test"\]|`Array` of `String` items - takes an array of Beacon IDs.  Required.|
 |"destination"|"43951ajdsflka3241"|`String` (technically a Mongo ObjectId).  ID of a destination to bind to this event. Optional.|
 
 Example payload of updating an `Event` without a `MetaMessage`:
