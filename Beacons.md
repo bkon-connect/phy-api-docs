@@ -212,7 +212,7 @@ Parameter Options:
 
 Example response:
 
-`200` status code.  If the client requires a refresh of the beacons, do a fetch from the `/api/v2/beacons/ endpoint.
+`200` status code.  If the client requires a refresh of the beacons, do a fetch from the `/api/v2/beacons/ endpoint`.
 
 ```
 {
