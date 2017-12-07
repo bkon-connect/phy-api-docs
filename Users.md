@@ -112,6 +112,7 @@ Arguments:
 |"addBeacons"|true|`Boolean` - Optional.|
 |"toggleBeacons"|true|`Boolean` - Optional.|
 |"viewMetrics"|true|`Boolean` - Optional.|
+
 Example response:
 
 ```
