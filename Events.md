@@ -85,63 +85,19 @@ Example payload:
 Create a new `Event` resource with / without a `Meta Message`
 
 Arguments:
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"name"</td>
-    <td>"Name of event"</td>
-    <td>`String` - Optional but Recomended</td>
-  </tr>
-  <tr>
-    <td>"redirectUrl"</td>
-    <td>"https://www.google.com"</td>
-    <td>`String` - defaults to 'https://phy.net/setup'. Required.</td>
-  </tr>
-  <tr>
-    <td>"metaMessage"</td>
-    <td>`{"title": "Landing on Google", "description": "a custom description of google"}`</td>
-    <td>`Object` - Optional.  See CoverCard™ (also known as MetaMessage) API docs for more options</td>
-  </tr>
-  <tr>
-    <td>"metaMessageActive"</td>
-    <td>true</td>
-    <td>`Boolean` - defaults to `false`.  Optional.</td>
-  </tr>
-  <tr>
-    <td>"proximity"</td>
-    <td>2</td>
-    <td>`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`</td>
-  </tr>
-  <tr>
-    <td>"start"</td>
-    <td>["2016-05-15", "09:00"]</td>
-    <td>`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm'].  Required.</td>
-  </tr>
-  <tr>
-    <td>"stop"</td>
-    <td>["2016-05-16", "09:00"]</td>
-    <td>`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm'].  Required.  (even though our schema says otherwise)</td>
-  </tr>
-  <tr>
-    <td>"timezone"</td>
-    <td>"America/Los_Angeles"</td>
-    <td>`String` - Defaults to UTC. Required.  For options see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones and use the `TZ` column</td>
-  </tr>
-  <tr>
-    <td>"beacons"</td>
-    <td>["123test", "456test"]</td>
-    <td>`Array` of `String` items - requires an array of Beacon IDs.  Required.</td>
-  </tr>
-  <tr>
-    <td>"destination"</td>
-    <td>"43951ajdsflka3241"</td>
-    <td>`String` (technically a Mongo ObjectId).  Id of a destination to bind to this event.  Optional.</td>
-  </tr>
-</table>
+
+|Parameter|Example|Notes|
+|:---:|:---|:---:|
+|"name"|"Name of event"|`String` - Optional but Recomended|
+|"redirectUrl"|"https://www.google.com"|`String` - defaults to 'https://phy.net/setup'. Required.|
+|"metaMessage"|<pre>{<br>"title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional.  See CoverCard™ (also known as MetaMessage) API docs for more options|
+|"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
+|"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`|
+|"start"|["2016-05-15", "09:00"]|`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm'].  Required.|
+|"stop"|["2016-05-16", "09:00"]|`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm'].  Required.|
+|"timezone"|"America/Los_Angeles"|`String` - Defaults to UTC. Required.  For options see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones and use the `TZ` column|
+|"beacons"|["123test", "456test"]|`Array` of `String` items - requires an array of Beacon IDs.  Required.|
+|"destination"|"43951ajdsflka3241"|`String` (technically a Mongo ObjectId).  Id of a destination to bind to this event.  Optional.|
 
 Example Payload without `Meta Message`:
 ```
@@ -193,65 +149,20 @@ If you want to update a `Meta Message` you must pass through both `metaMessageAc
 
 Arguments
 
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"name"</td>
-    <td>"Name of event"</td>
-    <td>`String` - Optional but Highly Recommended. </td>
-  </tr>
-  <tr>
-    <td>"redirectUrl"</td>
-    <td>"https://www.google.com"</td>
-    <td>`String` - defaults to 'https://phy.net/setup'. Required.</td>
-  </tr>
-  <tr>
-    <td>"metaMessage"</td>
-    <td>{"title": "Landing on Google", "description": "a custom description of google"}</td>
-    <td>`Object` - Optional.  See CoverCard™ (also known as MetaMessage) API docs for more options</td>
-  </tr>
-  <tr>
-    <td>"metaMessageActive"</td>
-    <td>true</td>
-    <td>`Boolean` - defaults to `false`.  Optional.</td>
-  </tr>
-  <tr>
-    <td>"proximity"</td>
-    <td>2</td>
-    <td>`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`. Optional after set once.</td>
-  </tr>
-  <tr>
-    <td>"start"</td>
-    <td>["2016-05-15", "09:00"]</td>
-    <td>`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm'].  Required.</td>
-  </tr>
-  <tr>
-    <td>"stop"</td>
-    <td>["2016-05-16", "09:00"]</td>
-    <td>`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm'].  Required.</td>
-  </tr>
-  <tr>
-    <td>"timezone"</td>
-    <td>"America/Los_Angeles"</td>
-    <td>`String` - Defaults to UTC. Required.  For options see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones and use the `TZ` column</td>
-  </tr>
-  <tr>
-    <td>"beacons"</td>
-    <td>["123test", "456test"]</td>
-    <td>`Array` of `String` items - takes an array of Beacon IDs.  Required.</td>
-  </tr>
-  <tr>
-    <td>"destination"</td>
-    <td>"43951ajdsflka3241"</td>
-    <td>`String` (technically a Mongo ObjectId).  ID of a destination to bind to this event.  Optional.</td>
-  </tr>
-</table>
+|Parameter|Example|Notes|
+|:---:|:---|:---:|
+|"name"|"Name of event"|`String` - Optional but Highly Recommended.|
+|"redirectUrl"|"https://www.google.com"|`String` - defaults to 'https://phy.net/setup'. Required.|
+|"metaMessage"|<pre>{<br>"title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional.  See CoverCard™ (also known as MetaMessage) API docs for more options|
+|"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
+|"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`. Optional after set once.|
+|"start"|["2016-05-15", "09:00"]|`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm']. Required.|
+|"stop"|["2016-05-16", "09:00"]|`Array` of `String` items - takes a format of ['yyyy-mm-dd', 'hh:mm'].  Required.|
+|"timezone"|"America/Los_Angeles"|`String` - Defaults to UTC. Required.  For options see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones and use the `TZ` column|
+|"beacons"|["123test", "456test"]|`Array` of `String` items - takes an array of Beacon IDs.  Required.|
+|"destination"|"43951ajdsflka3241"|`String` (technically a Mongo ObjectId).  ID of a destination to bind to this event. Optional.|
 
-Example payload of updating an `Event` without a `Meta Message`:
+Example payload of updating an `Event` without a `MetaMessage`:
 ```
 {
   "_id":"576450837fcce5d8838b30c2",
@@ -264,7 +175,7 @@ Example payload of updating an `Event` without a `Meta Message`:
   "timezone":"America/Los_Angeles"
 }
 ```
-Example payload of updating an `Event` with a `Meta message`:
+Example payload of updating an `Event` with a `MetaMessage`:
 ```
 {
   "_id":"576450837fcce5d8838b30c2",

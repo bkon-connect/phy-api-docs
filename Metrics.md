@@ -34,28 +34,12 @@ Example payload:
 The metrics endpoint that returns leaderboard data for a given metric and dimension, optionally limited.
 
 Parameters:
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"metric"</td>
-    <td>"total-scans"</td>
-    <td>`String` - Required. Valid metrics: `total-scans`, `total-opens`</td>
-  </tr>
-  <tr>
-    <td>"dimension"</td>
-    <td>"url"</td>
-    <td>`String` - Required. Valid dimensions: `url`, `beacon`, `app`</td>
-  </tr>
-  <tr>
-    <td>"limit"</td>
-    <td>5</td>
-    <td>`Number` - Optional. Default: 5</td>
-  </tr>
-</table>
+
+|Parameter|Example|Notes|
+|:---:|:---|:---:|
+|"metric"|"total-scans"|`String` - Required. Valid metrics: `total-scans`, `total-opens`|
+|"dimension"|"url"|`String` - Required. Valid dimensions: `url`, `beacon`, `app`|
+|"limit"|5|`Number` - Optional. Default: 5|
 
 Example payload:
 
@@ -137,23 +121,11 @@ Example payload:
 The metrics endpoint that returns timeline data for a given metric and timerange.
 
 Parameters:
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"metric"</td>
-    <td>"total-scans"</td>
-    <td>`String` - Required. Valid metrics: `total-scans`, `total-opens`</td>
-  </tr>
-  <tr>
-    <td>"timerange"</td>
-    <td>"today"</td>
-    <td>`String` - Required. Valid timeranges: `today`, `yesterday`, `last-24-hours`, `this-week`, `last-week`, `last-7-days`, `this-month`, `last-month`, `last-30-days`, `this-quarter`, `last-quarter`, `this-year`, `last-year`</td>
-  </tr>
-</table>
+
+|Parameter|Example|Notes|
+|:---:|:---|:---:|
+|"metric"|"total-scans"|`String` - Required. Valid metrics: `total-scans`, `total-opens`|
+|"timerange"|"today"|`String` - Required. Valid timeranges: `today`, `yesterday`, `last-24-hours`, `this-week`, `last-week`, `last-7-days`, `this-month`, `last-month`, `last-30-days`, `this-quarter`, `last-quarter`, `this-year`, `last-year`|
 
 Example payload:
 

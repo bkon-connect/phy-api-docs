@@ -11,23 +11,10 @@ When updating a `Destination` with a `TapAction` that does not currently have on
 A `Tap Action` must have a valid `actionType` to be saved and set. There are currently four types of `Tap Actions`
 
 ### Tap To Call
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"actionType"</td>
-    <td>"Call"</td>
-    <td>`String` - Required.</td>
-  </tr>
-  <tr>
-    <td>"to"</td>
-    <td>"111-111-1111"</td>
-    <td>`String`</td>
-  </tr>
-</table>
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"actionType"|"Call"|`String` - Required.|
+|"to"|"111-111-1111"|`String` - Recommended.|
 
 Example payload:
 
@@ -76,43 +63,14 @@ Example response:
 
 
 ### Tap To Email
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"actionType"</td>
-    <td>"Email"</td>
-    <td>`String` - Required.</td>
-  </tr>
-  <tr>
-    <td>"to"</td>
-    <td>"to.tim@test.com"</td>
-    <td>`String`</td>
-  </tr>
-  <tr>
-    <td>"cc"</td>
-    <td>"copied.carl@test.com"</td>
-    <td>`String`</td>
-  </tr>
-  <tr>
-    <td>"bcc"</td>
-    <td>"blind.copied.carol@test.com"</td>
-    <td>`String`</td>
-  </tr>
-  <tr>
-    <td>"subject"</td>
-    <td>"Sample Subject"</td>
-    <td>`String` Cannot have an email address included</td>
-  </tr>
-  <tr>
-    <td>"body"</td>
-    <td>"Bountiful Body of Beauty"</td>
-    <td>`String` Cannot have an email address included</td>
-  </tr>
-</table>
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"actionType"|"Email"|`String` - Required.|
+|"to"|"to.tim@test.com"|`String` - Recommended|
+|"cc"|"copied.carl@test.com"|`String`|
+|"bcc"|"blind.copied.carol@test.com"|`String`|
+|"subject"|"Sample Subject"|`String` - Cannot have an email address included|
+|"body"|"Bountiful Body of Beauty"|`String` Cannot have an email address included|
 
 Example payload:
 
@@ -140,28 +98,11 @@ Example payload:
 
 
 ### Tap To Text (SMS)
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"actionType"</td>
-    <td>"Sms"</td>
-    <td>`String` - Required.</td>
-  </tr>
-  <tr>
-    <td>"to"</td>
-    <td>"111-111-1111"</td>
-    <td>`String`</td>
-  </tr>
-  <tr>
-    <td>"message"</td>
-    <td>"Meaningful Message"</td>
-    <td>`String`</td>
-  </tr>
-</table>
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"actionType"|"Sms"|`String` - Required.|
+|"to"|"111-111-1111"|`String`|
+|"message"|"Meaningful Message"|`String`|
 
 Example payload:
 
@@ -182,46 +123,12 @@ Example payload:
 
 
 ### Developer's Webhook
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"actionType"</td>
-    <td>"Webhook"</td>
-    <td>`String` - Required.</td>
-  </tr>
-  <tr>
-    <td>"method"</td>
-    <td>"POST"</td>
-    <td>`String` Options: [`POST`, `GET`] - Required.</td>
-  </tr>
-  <tr>
-    <td>"payloadUrl"</td>
-    <td>"http://example.com"</td>
-    <td>`String` - Required. This is where you can integrate another API. Here's an [integration with the Slack API](https://help.phyplatform.support/hc/en-us/articles/115002894713-TapAction-Recipe-Message-to-Slack).  </td>
-  </tr>
-
-  <tr>
-    <td>"contentType"</td>
-    <td>"application/json"</td>
-    <td>`String` Options: `['application/json', 'application/x-www-form-urlencoded']`</td>
-  </tr>
-  <tr>
-    <td>"successMessage"</td>
-    <td>"Woooooooo"</td>
-    <td>`String`</td>
-  </tr>
-  <tr>
-    <td>"loadingMessage"</td>
-    <td>"Please wait..."</td>
-    <td>`String`</td>
-  </tr>
-  <tr>
-    <td>"failureMessage"</td>
-    <td>"Oops! An error occurred"</td>
-    <td>`String`</td>
-  </tr>
-</table>
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"actionType"|"Webhook"|`String` - Required.|
+|"method"|"POST"|`String` Options: [`POST`, `GET`] - Required.|
+|"payloadUrl"|"http://example.com"|`String` - Required. This is where you can integrate another API. Here's an [integration with the Slack API](https://help.phyplatform.support/hc/en-us/articles/115002894713-TapAction-Recipe-Message-to-Slack).  |
+|"contentType"|"application/json"|`String` Options: `['application/json', 'application/x-www-form-urlencoded']`|
+|"successMessage"|"Woooooooo"|`String`|
+|"loadingMessage"|"Please wait..."|`String`|
+|"failureMessage"|"Oops! An error occurred"|`String`|

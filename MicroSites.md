@@ -14,7 +14,7 @@ For a detailed look at MicroSite Content Objects, see the [MicroSite Content Wik
 
 ### GET `/api/v2/microsites`
 
-The index endpoint returns all microsites for a given account.  An example payload:
+The index endpoint returns all MicroSites for a given account.  An example payload:
 
 ```
 [
@@ -96,50 +96,18 @@ Example response:
 
 Create a new `microsite` resource.  Valid parameters are:
 
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>content</td>
-    <td>`[`<br>  `{contentType: 'Paragraph', body: 'Hello Paragraph'},`<br>  `{contentType: 'Header', body: 'Hello Header'}`<br>`]`</td>
-    <td>Array of Microsite Content Objects - see [MicroSite Content Wiki](https://github.com/bkon-connect/phy-api-docs/wiki/MicroSite-Content) for more</td>
-  </tr>
-  <tr>
-    <td>faviconUrl</td>
-    <td>"https://url.to.some.favicon"</td>
-    <td>String - Link to a favicon image</td>
-  </tr>
-  <tr>
-    <td>description</td>
-    <td>"1st page ever"</td>
-    <td>String - description of the page for usage.</td>
-  </tr>
-  <tr>
-    <td>name</td>
-    <td>"1st page"</td>
-    <td>String - name of the page.  Required</td>
-  </tr>
-  <tr>
-    <td>owners</td>
-    <td>`['idOfOwner']`</td>
-    <td>Array of Ref Ids - reference IDs to owners of the MicroSite.  Like meta messages, this is to account for bulk ownership / usage of a microsite. Required.</td>
-  </tr>
-  <tr>
-    <td>ownerType</td>
-    <td>"Destination"</td>
-    <td>String - type of owner.  can be "Destination", "Beacon", "Event".  Required.</td>
-  </tr>
-  <tr>
-    <td>title</td>
-    <td>"Title of the Page"</td>
-    <td>String - the actual title tag content of the microsite.  Required.</td>
-  </tr>
-</table>
+|Parameter|Example|Notes|
+|:---:|:---|:---:|
+|content|<pre>[<br> {<br>  contentType: 'Paragraph',<br>  body: 'Hello Paragraph'<br> },<br> {<br>  contentType: 'Header',<br>  body: 'Hello Header'<br> }<br>]</pre>|Array of MicroSite Content Objects - see [MicroSite Content Wiki](https://github.com/bkon-connect/phy-api-docs/wiki/MicroSite-Content) for more|
+|faviconUrl|"https://url.to.some.favicon"|String - Link to a favicon image|
+|description|"1st page ever"|String - description of the page for usage.|
+|name|"1st page"|String - name of the page.  Required|
+|owners|`['idOfOwner']`|Array of Ref Ids - reference IDs to owners of the MicroSite.  Like CoverCards, this is to account for bulk ownership / usage of a MicroSite. Required.|
+|ownerType|"Destination"|String - type of owner.  can be "Destination", "Beacon", "Event".  Required.|
+|title|"Title of the Page"|String - the actual title tag content of the MicroSite.  Required.|
 
-example request:
+
+Example request:
 
 ```
 {
@@ -162,7 +130,7 @@ example request:
 }
 ```
 
-example response:
+Example response:
 
 ```
 {
@@ -200,52 +168,19 @@ example response:
 
 ### PATCH `/api/v2/microsites/:id`
 
-Completely replace the content on an existing `microsite` resource with this `PATCH` action Requires a valid `microsite` id. Valid parameters are:
+Modify an existing `microsite` resource with this `PATCH` action. Requires a valid `microsite` id. Valid parameters are:
 
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>content</td>
-    <td>`[`<br> ` {contentType: 'Paragraph', body: 'Hello Paragraph'},`<br>  `{contentType: 'Header', body: 'Hello Header'}`<br>`]`</td>
-    <td>Array of Microsite Content Objects - see Microsite Content wiki for more</td>
-  </tr>
-  <tr>
-    <td>faviconUrl</td>
-    <td>"https://url.to.some.favicon"</td>
-    <td>String - Link to a favicon image</td>
-  </tr>
-  <tr>
-    <td>description</td>
-    <td>"1st page ever"</td>
-    <td>String - description of the page for usage.</td>
-  </tr>
-  <tr>
-    <td>name</td>
-    <td>"1st page"</td>
-    <td>String - name of the page.  Required</td>
-  </tr>
-  <tr>
-    <td>owners</td>
-    <td>`['idOfOwner']`</td>
-    <td>Array of Ref Ids - reference IDs to owners of the microsite.  Like meta messages, this is to account for bulk ownership / usage of a microsite. Required.</td>
-  </tr>
-  <tr>
-    <td>ownerType</td>
-    <td>"Destination"</td>
-    <td>String - type of owner. Can be "Destination", "Beacon", "Event".  Required.</td>
-  </tr>
-  <tr>
-    <td>title</td>
-    <td>"Title of the Page"</td>
-    <td>String - the actual title tag content of the microsite.  Required.</td>
-  </tr>
-</table>
+|Parameter|Example|Notes|
+|:---:|:---|:---:|
+|content|<pre>[<br> {<br>  contentType: 'Paragraph',<br>  body: 'Hello Paragraph'<br> },<br> {<br>  contentType: 'Header',<br>  body: 'Hello Header'<br> }<br>]</pre>|Array of Microsite Content Objects - see Microsite Content wiki for more|
+|faviconUrl|"https://url.to.some.favicon"|`String` - Link to a favicon image|
+|description|"1st page ever"|`String` - description of the page for usage.|
+|name|"1st page"|`String `- name of the page.  Required|
+|owners|`['idOfOwner']`|Array of Ref Ids - reference IDs to owners of the MicroSite.  As with CoverCards, this is to account for bulk ownership / usage of a MicroSite. Required.|
+|ownerType|"Destination"|`String` - type of owner. Can be "Destination", "Beacon", "Event".  Required.|
+|title|"Title of the Page"|`String` - the actual title tag content of the MicroSite.  Required.<|
 
-example request:
+Example request:
 
 ```
 {
@@ -256,7 +191,7 @@ example request:
 }
 ```
 
-example response:
+Example response:
 
 ```
 {
@@ -297,4 +232,4 @@ Remove a `microsite`.  Requires a valid `microsite` id.
 
 Reponse is 204 with no other data.
 
-Note: removing a microsite does not delete associated templates or themes since they may be bound to other microsites.
+Note: removing a MicroSite does not delete associated templates or themes since they may be bound to other microsites.

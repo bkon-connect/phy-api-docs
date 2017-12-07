@@ -49,18 +49,10 @@ Example payload:
 Invite a new user with the given email address.
 
 Parameters:
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"email"</td>
-    <td>"test@example.com"</td>
-    <td>`String` - Required.</td>
-  </tr>
-</table>
+
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"email"|"test@example.com"|`String` - Required.|
 
 Example payload:
 ```
@@ -86,38 +78,13 @@ Update an existing `User` by `User` ID.
 
 Arguments:
 
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"firstName"</td>
-    <td>"John"</td>
-    <td>`String` - Optional.</td>
-  </tr>
-  <tr>
-    <td>"lastName"</td>
-    <td>"Doe"</td>
-    <td>`String` - Optional.</td>
-  </tr>
-  <tr>
-    <td>"email"</td>
-    <td>"test@example.com"</td>
-    <td>`String` - Optional.</td>
-  </tr>
-  <tr>
-    <td>"locale"</td>
-    <td>"en"</td>
-    <td>`String` - Optional. (`en`, `fr`, `da` or `de`)</td>
-  </tr>
-  <tr>
-    <td>"timezone"</td>
-    <td>"America/Chicago"</td>
-    <td>`String` - Optional.</td>
-  </tr>
-</table>
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"firstName"|"John"|`String` - Optional.|
+|"lastName"|"Doe"|`String` - Optional.|
+|"email"|"test@example.com"|`String` - Optional.|
+|"locale"|"en"|`String` - Optional. (`en`, `fr`, `da` or `de`)|
+|"timezone"|"America/Chicago"|`String` - Optional.|
 
 Example response:
 
@@ -138,39 +105,13 @@ Update user permissions for an account.
 
 Arguments:
 
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"accountManagement"</td>
-    <td>true</td>
-    <td>`Boolean` - Optional.</td>
-  </tr>
-  <tr>
-    <td>"userManagement"</td>
-    <td>true</td>
-    <td>`Boolean` - Optional.</td>
-  </tr>
-  <tr>
-    <td>"addBeacons"</td>
-    <td>true</td>
-    <td>`Boolean` - Optional.</td>
-  </tr>
-  <tr>
-    <td>"toggleBeacons"</td>
-    <td>true</td>
-    <td>`Boolean` - Optional.</td>
-  </tr>
-  <tr>
-    <td>"viewMetrics"</td>
-    <td>true</td>
-    <td>`Boolean` - Optional.</td>
-  </tr>
-</table>
-
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"accountManagement"|true|`Boolean` - Optional.|
+|"userManagement"|true|`Boolean` - Optional.|
+|"addBeacons"|true|`Boolean` - Optional.|
+|"toggleBeacons"|true|`Boolean` - Optional.|
+|"viewMetrics"|true|`Boolean` - Optional.|
 Example response:
 
 ```

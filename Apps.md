@@ -221,48 +221,16 @@ Show endpoint for the relationship between a beacon and an app. Includes the bea
 #### PUT `/api/v2/apps/:id/beacons/:beaconId`
 
 Update endpoint for beacons.  Parameters are:
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"url"</td>
-    <td>"https://google.com"</td>
-    <td>String - Required.</td>
-  </tr>
-  <tr>
-    <td>"notes"</td>
-    <td>"Description of the beacon"</td>
-    <td>String - Optional.</td>
-  </tr>
-  <tr>
-    <td>"destination"</td>
-    <td>"aefoiawe123"</td>
-    <td>ObjectId of Destination instance - Optional.</td>
-  </tr>
-  <tr>
-    <td>"deactivated"</td>
-    <td>true</td>
-    <td>Boolean - Optional. If false, the beacon will follow alternate redirection rules as defined here.</td>
-  </tr>
-  <tr>
-    <td>"persistent"</td>
-    <td>true</td>
-    <td>Boolean - Optional. If true, the beacon will always show within the app</td>
-  </tr>
-  <tr>
-    <td>"persistentPosition"</td>
-    <td>true</td>
-    <td>String - Options: 'above', 'below'. Determines whether a persistent touchpoint shows above or below non-persistent touchpoints. </td>
-  </tr>
-  <tr>
-    <td>"filterIncludes"</td>
-    <td>true</td>
-    <td>Boolean - Optional. Only relevant if app's filterLevel is ACCOUNT. If false, the touchpoint will not appear in that app.</td>
-  </tr>
-</table>
+
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"url"|"https://google.com"|`String` - Required.|
+|"notes"|"Description of the beacon"|`String` - Optional.|
+|"destination"|"aefoiawe123"|`ObjectId` of `Destination` instance - Optional.|
+|"deactivated"|true|`Boolean` - Optional. If false, the beacon will follow alternate redirection rules as defined here.|
+|"persistent"|true|`Boolean` - Optional. If true, the beacon will always show within the app|
+|"persistentPosition"|true|`String` - Options: 'above', 'below'. Determines whether a persistent touchpoint shows above or below non-persistent touchpoints.|
+|"filterIncludes"|true|`Boolean` - Optional. Only relevant if app's `filterLevel` is `ACCOUNT`. If false, the touchpoint will not appear in that app.|
 
 
 Upon update, the fully populated, updated document will be returned.  See `GET /api/v2/apps/:id/beacons/:beaconId` example payload for example return.

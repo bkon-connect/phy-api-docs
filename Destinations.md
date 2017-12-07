@@ -55,53 +55,17 @@ Example payload:
 Create a new `Destination` resource with / without a `Meta Message` resource.
 
 Parameters that can be passed up:
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"name"</td>
-    <td>"Landing Page"</td>
-    <td>`String` defaults to "My Destination" - Optional</td>
-  </tr>
-  <tr>
-    <td>"notes"</td>
-    <td>"a url for our landing page!"</td>
-    <td>`String` - Optional.</td>
-  </tr>
-  <tr>
-    <td>"url"</td>
-    <td>"https://www.google.com"</td>
-    <td>`String` - Required.</td>
-  </tr>
-  <tr>
-    <td>"metaMessage"</td>
-    <td>`{"title": "Landing on Google", "description": "a custom description of google"}`</td>
-    <td>`Object` - Optional.  See CoverCard™ (also known as MetaMessage) API docs for more options</td>
-  </tr>
-  <tr>
-    <td>"metaMessageActive"</td>
-    <td>true</td>
-    <td>`Boolean` - defaults to `false`.  Optional.</td>
-  </tr>
-  <tr>
-    <td>"tapAction"</td>
-    <td>`{"actionType": "Call", "to": "555-867-5309"}`</td>
-    <td>`Object` - Optional.  See [Tap Action API docs](https://github.com/bkon-connect/phy-api-docs/wiki/Tap-Actions) for more options</td>
-  </tr>
-  <tr>
-    <td>"tapActionActive"</td>
-    <td>true</td>
-    <td>`Boolean` - defaults to `false`.  Optional.</td>
-  </tr>
-  <tr>
-    <td>"proximity"</td>
-    <td>2</td>
-    <td>`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`</td>
-  </tr>
-</table>
+
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"name"|"Landing Page"|`String` defaults to "My Destination" - Optional|
+|"notes"|"a url for our landing page!"|`String` - Optional.|
+|"url"|"https://www.google.com"|`String` - Required.|
+|"metaMessage"|`{"title": "Landing on Google", "description": "a custom description of google"}`|`Object` - Optional.  See [CoverCard](https://github.com/bkon-connect/phy-api-docs/wiki/CoverCards)™ API docs for more options|
+|"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
+|"tapAction"|`{"actionType": "Call", "to": "555-867-5309"}`|`Object` - Optional.  See [Tap Action API docs](https://github.com/bkon-connect/phy-api-docs/wiki/Tap-Actions) for more options|
+|"tapActionActive"|true|`Boolean` - defaults to `false`.  Optional.|
+|"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`|
 
 `200` Response Payload returns the newly created instance of a `Destination`.  Example:
 
@@ -123,53 +87,16 @@ Update an existing `Destination` by `Destination` ID.
 
 Arguments:
 
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"name"</td>
-    <td>"Landing Page"</td>
-    <td>`String` defaults to "My Destination" - Optional</td>
-  </tr>
-  <tr>
-    <td>"notes"</td>
-    <td>"a url for our landing page!"</td>
-    <td>`String` - Optional.</td>
-  </tr>
-  <tr>
-    <td>"url"</td>
-    <td>"https://www.google.com"</td>
-    <td>`String` - Required.</td>
-  </tr>
-  <tr>
-    <td>"metaMessage"</td>
-    <td>`{"title": "Landing on Google", "description": "a custom description of google"}`</td>
-    <td>`Object` - Optional.  See CoverCard™ (also known as MetaMessage) API docs for more options</td>
-  </tr>
-  <tr>
-    <td>"metaMessageActive"</td>
-    <td>true</td>
-    <td>`Boolean` - defaults to `false`.  Optional.</td>
-  </tr>
-  <tr>
-    <td>"tapAction"</td>
-    <td>`{"actionType": "Call", "to": "867-5309"}`</td>
-    <td>`Object` - Optional.  See [TapActions API docs](https://github.com/bkon-connect/phy-api-docs/wiki/Tap-Actions) for more options</td>
-  </tr>
-  <tr>
-    <td>"tapActionActive"</td>
-    <td>true</td>
-    <td>`Boolean` - defaults to `false`.  Optional.</td>
-  </tr>
-  <tr>
-    <td>"proximity"</td>
-    <td>2</td>
-    <td>`Int` - defaults to `2.  Can be `-1`, `0`, `1`, `2`</td>
-  </tr>
-</table>
+|Parameter|Example|Notes|
+|:---:|:---|:---:|
+|"name"|"Landing Page"|`String` defaults to "My Destination" - Optional|
+|"notes"|"a url for our landing page!"|`String` - Optional.|
+|"url"|"https://www.google.com"|`String` - Required.|
+|"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional.  See [CoverCard](https://github.com/bkon-connect/phy-api-docs/wiki/CoverCards)™ API docs for more options|
+|"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
+|"tapAction"|<pre>{<br> "actionType": "Call",<br> "to": "867-5309"}</pre>|`Object` - Optional.  See [TapActions API docs](https://github.com/bkon-connect/phy-api-docs/wiki/Tap-Actions) for more options|
+|"tapActionActive"|true|`Boolean` - defaults to `false`.  Optional.|
+|"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`|
 
 Example response:
 ```
