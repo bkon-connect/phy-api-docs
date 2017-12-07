@@ -99,12 +99,12 @@ Create a new `microsite` resource.  Valid parameters are:
 |Parameter|Example|Notes|
 |:---:|:---|:---:|
 |content|<pre>[<br> {<br>  contentType: 'Paragraph',<br>  body: 'Hello Paragraph'<br> },<br> {<br>  contentType: 'Header',<br>  body: 'Hello Header'<br> }<br>]</pre>|Array of MicroSite Content Objects - see [MicroSite Content Wiki](https://github.com/bkon-connect/phy-api-docs/wiki/MicroSite-Content) for more|
-|faviconUrl|"https://url.to.some.favicon"|String - Link to a favicon image|
-|description|"1st page ever"|String - description of the page for usage.|
-|name|"1st page"|String - name of the page.  Required|
+|faviconUrl|"https://url.to.some.favicon"|`String` - Link to a favicon image|
+|description|"1st page ever"|`String` - description of the page for usage.|
+|name|"1st page"|`String` - name of the page.  Required|
 |owners|`['idOfOwner']`|Array of Ref Ids - reference IDs to owners of the MicroSite.  Like CoverCards, this is to account for bulk ownership / usage of a MicroSite. Required.|
-|ownerType|"Destination"|String - type of owner.  can be "Destination", "Beacon", "Event".  Required.|
-|title|"Title of the Page"|String - the actual title tag content of the MicroSite.  Required.|
+|ownerType|"Destination"|`String` - type of owner.  can be "Destination", "Beacon", "Event".  Required.|
+|title|"Title of the Page"|`String` - the actual title tag content of the MicroSite.  Required.|
 
 
 Example request:
