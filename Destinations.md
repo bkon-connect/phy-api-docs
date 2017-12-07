@@ -57,13 +57,13 @@ Create a new `Destination` resource with / without a `Meta Message` resource.
 Parameters that can be passed up:
 
 |Parameter|Example|Notes|
-|:---:|:---:|:---:|
+|:---:|:---|:---:|
 |"name"|"Landing Page"|`String` defaults to "My Destination" - Optional|
 |"notes"|"a url for our landing page!"|`String` - Optional.|
 |"url"|"https://www.google.com"|`String` - Required.|
-|"metaMessage"|`{"title": "Landing on Google", "description": "a custom description of google"}`|`Object` - Optional.  See [CoverCard](https://github.com/bkon-connect/phy-api-docs/wiki/CoverCards)™ API docs for more options|
+|"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional.  See [CoverCard](https://github.com/bkon-connect/phy-api-docs/wiki/CoverCards)™ API docs for more options|
 |"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
-|"tapAction"|`{"actionType": "Call", "to": "555-867-5309"}`|`Object` - Optional.  See [Tap Action API docs](https://github.com/bkon-connect/phy-api-docs/wiki/Tap-Actions) for more options|
+|"tapAction"|<pre>{<br> "actionType": "Call",<br> "to": "555-867-5309"</br>}</pre>|`Object` - Optional.  See [Tap Action API docs](https://github.com/bkon-connect/phy-api-docs/wiki/Tap-Actions) for more options|
 |"tapActionActive"|true|`Boolean` - defaults to `false`.  Optional.|
 |"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`|
 
@@ -94,7 +94,7 @@ Arguments:
 |"url"|"https://www.google.com"|`String` - Required.|
 |"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional.  See [CoverCard](https://github.com/bkon-connect/phy-api-docs/wiki/CoverCards)™ API docs for more options|
 |"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
-|"tapAction"|<pre>{<br> "actionType": "Call",<br> "to": "867-5309"}</pre>|`Object` - Optional.  See [TapActions API docs](https://github.com/bkon-connect/phy-api-docs/wiki/Tap-Actions) for more options|
+|"tapAction"|<pre>{<br> "actionType": "Call",<br> "to": "867-5309"<br>}</pre>|`Object` - Optional.  See [TapActions API docs](https://github.com/bkon-connect/phy-api-docs/wiki/Tap-Actions) for more options|
 |"tapActionActive"|true|`Boolean` - defaults to `false`.  Optional.|
 |"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`|
 
