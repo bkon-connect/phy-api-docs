@@ -5,23 +5,11 @@ For access to the `/api/v2/metrics` endpoints you must be [Authenticated](https:
 The metrics endpoint that returns metric data for a given metric and timerange.
 
 Parameters:
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Example</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>"metric"</td>
-    <td>"total-scans"</td>
-    <td>`String` - Required. Valid metrics: `total-scans`, `total-opens`, `scan-open-ratio`, `avg-daily-scans`</td>
-  </tr>
-  <tr>
-    <td>"timerange"</td>
-    <td>"today"</td>
-    <td>`String` - Required. Valid timeranges: `today`, `yesterday`, `last-24-hours`, `this-week`, `last-week`, `last-7-days`, `this-month`, `last-month`, `last-30-days`, `this-quarter`, `last-quarter`, `this-year`, `last-year`</td>
-  </tr>
-</table>
+
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"metric"|"total-scans"|`String` - Required. Valid metrics: `total-scans`, `total-opens`, `scan-open-ratio`, `avg-daily-scans`|
+|"timerange"|"today"|`String` - Required. Valid timeranges: `today`, `yesterday`, `last-24-hours`, `this-week`, `last-week`, `last-7-days`, `this-month`, `last-month`, `last-30-days`, `this-quarter`, `last-quarter`, `this-year`, `last-year`|
 
 Example payload:
 
