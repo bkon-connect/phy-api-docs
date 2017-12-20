@@ -1,6 +1,6 @@
 # API V2 Beacons
 
-For access to the /api/v2/beacons endpoint you must be [Authenticated](https://github.com/bkon-connect/phy/wiki/Authentication)
+For access to the /api/v2/beacons endpoint you must be [Authenticated](Authentication.md)
 <br><br>
 ### GET `/api/v2/beacons`
 
@@ -185,7 +185,7 @@ Update endpoint for beacons.  Parameters are:
 |"install"|<pre>{<br>"install":<br>{<br> "brand": "-1",<br> "details": "",<br> "locationAddress": "",<br> "locationName": "",<br> "locationType": "fixed",<br> "photo": {<br>  "close": "",<br>  "far": "",<br>  "immediate": ""<br>  }<br> }<br>}</pre>|All except `photo` are type `String` including the `photo` properties.  All are Optional.|
 |"urlTags"|<pre>{<br>"custom": [<br> {<br>  "key": "",<br>  "value: "",<br>  "active": false<br>  }<br> ]<br> "phyTimeActive": false,<br> "phyIDActive": false<br>}</pre>|`custom` is an array of objects which contain:<br>(a) "key" - `String` optional<br>(b) "value" - `String` optional<br>(c) "active" - `Boolean` defaults to false.  Optional<br><br>"phyTimeActive" - `Boolean` defaults to false<br>"phyIDActive" - `Boolean` defaults to false|
 |"metaMessageActive"|true|`Boolean` - Optional.|
-|"metaMessage"|<pre>{<br>  "title": "example",<br>  "description": "example",<br>  "faviconUrl": "https://url.to.image",<br>  "imageUrl": "https://url.to.image"<br>}</pre>|See CoverCards API for properties and description|
+|"metaMessage"|<pre>{<br>  "title": "example",<br>  "description": "example",<br>  "faviconUrl": "https://url.to.image",<br>  "imageUrl": "https://url.to.image"<br>}</pre>|See [CoverCards API](CoverCards.md) for properties and description|
 
 Upon update, the fully populated, updated document will be returned.  See `GET /api/v2/beacons/:id` example payload for example return.
 
@@ -208,7 +208,7 @@ Parameter Options:
 |"install"|<pre>{<br>"brand": "BKON",<br>"details": "",<br>"locationAddress": "",<br>"locationName": "jhggjhk",<br>"source": "Alk",<br>"photo": {<br> "close": "",<br> "far": "",<br> "immediate": ""<br> } <br>}</pre>|All except `photo` are type `String` including the `photo` properties.  All are Optional.|
 |"urlTags"|<pre>{<br>"custom": [<br> {<br>  "key": "",<br>  "value: "",<br>  "active": false<br> }<br>],<br> "phyTimeActive": false,<br> "phyIDActive": false<br>}</pre>|`custom` is an array of objects which contain:<br><br>(a) "key" - `String` optional<br>(b) "value" - `String` optional<br>(c) "active" - Boolean defaults to false.  Optional<br><br>"phyTimeActive" - `Boolean` defaults to false<br>"phyIDActive" - `Boolean` defaults to false|
 |"metaMessageActive"|true|Boolean - Optional.|
-|"metaMessage"|<pre>{<br> "title": "example",<br> "description": "example",<br> "faviconUrl": "https://url.to.image",<br> "imageUrl": "https://url.to.image"<br>}<br></pre>|See CoverCard™ (also known as MetaMessage) API docs for properties and description|
+|"metaMessage"|<pre>{<br> "title": "example",<br> "description": "example",<br> "faviconUrl": "https://url.to.image",<br> "imageUrl": "https://url.to.image"<br>}<br></pre>|See [CoverCards API](CoverCards.md) docs for properties and description|
 
 Example response:
 
