@@ -1,4 +1,4 @@
-The `Tap Action` resource is special in the sense that it is only created/read/updated/destroyed through other resources.  Currently, this is restricted to `Destination` resources.
+The `Tap Actions` resource is special in the sense that it is only created/read/updated/destroyed through other resources.  Currently, this is restricted to `Destination` resources.
 
 The workflow to create a `Destination` on all future resources is done by passing up:
 
