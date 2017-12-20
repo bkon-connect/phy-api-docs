@@ -1,4 +1,4 @@
-For access to the `/api/v2/metrics` endpoints you must be [Authenticated](https://github.com/bkon-connect/phy-api-docs/wiki/Authentication)
+For access to the `/api/v2/metrics` endpoints you must be [Authenticated](Authentication.md)
 
 #### GET `/api/v2/metrics/metric/:metric/:timerange`
 
