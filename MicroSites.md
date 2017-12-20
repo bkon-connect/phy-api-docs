@@ -1,4 +1,4 @@
-For access to `/api/v2/microsite` you must be [Authenticated](https://github.com/bkon-connect/phy-api-docs/wiki/Authentication).
+For access to `/api/v2/microsite` you must be [Authenticated](Authentication.md).
 
 ### Summary / Overview
 
@@ -10,7 +10,7 @@ The conceptual process of creating a MicroSite and using it (via API) is as foll
 
 2) Use the resulting `id` in the url `phy.net/ms/:id` in your destination's `url` property.
 
-For a detailed look at MicroSite Content Objects, see the [MicroSite Content Wiki](https://github.com/bkon-connect/phy-api-docs/wiki/MicroSite-Content)
+For a detailed look at MicroSite Content Objects, see the [MicroSite Content docs](MicroSite-Content.md)
 
 ### GET `/api/v2/microsites`
 
@@ -98,7 +98,7 @@ Create a new `microsite` resource.  Valid parameters are:
 
 |Parameter|Example|Notes|
 |:---:|:---|:---:|
-|content|<pre>[<br> {<br>  contentType: 'Paragraph',<br>  body: 'Hello Paragraph'<br> },<br> {<br>  contentType: 'Header',<br>  body: 'Hello Header'<br> }<br>]</pre>|Array of MicroSite Content Objects - see [MicroSite Content Wiki](https://github.com/bkon-connect/phy-api-docs/wiki/MicroSite-Content) for more|
+|content|<pre>[<br> {<br>  contentType: 'Paragraph',<br>  body: 'Hello Paragraph'<br> },<br> {<br>  contentType: 'Header',<br>  body: 'Hello Header'<br> }<br>]</pre>|Array of MicroSite Content Objects - see [MicroSite Content docs](MicroSite-Content.md) for more|
 |faviconUrl|"https://url.to.some.favicon"|`String` - Link to a favicon image|
 |description|"1st page ever"|`String` - description of the page for usage.|
 |name|"1st page"|`String` - name of the page.  Required|
@@ -172,13 +172,13 @@ Modify an existing `microsite` resource with this `PATCH` action. Requires a val
 
 |Parameter|Example|Notes|
 |:---:|:---|:---:|
-|content|<pre>[<br> {<br>  contentType: 'Paragraph',<br>  body: 'Hello Paragraph'<br> },<br> {<br>  contentType: 'Header',<br>  body: 'Hello Header'<br> }<br>]</pre>|Array of Microsite Content Objects - see Microsite Content wiki for more|
+|content|<pre>[<br> {<br>  contentType: 'Paragraph',<br>  body: 'Hello Paragraph'<br> },<br> {<br>  contentType: 'Header',<br>  body: 'Hello Header'<br> }<br>]</pre>|Array of Microsite Content Objects - see [Microsite Content docs](MicroSite-Content.md) for more|
 |faviconUrl|"https://url.to.some.favicon"|`String` - Link to a favicon image|
 |description|"1st page ever"|`String` - description of the page for usage.|
 |name|"1st page"|`String `- name of the page.  Required|
 |owners|`['idOfOwner']`|Array of Ref Ids - reference IDs to owners of the MicroSite.  As with CoverCards, this is to account for bulk ownership / usage of a MicroSite. Required.|
 |ownerType|"Destination"|`String` - type of owner. Can be "Destination", "Beacon", "Event".  Required.|
-|title|"Title of the Page"|`String` - the actual title tag content of the MicroSite.  Required.<|
+|title|"Title of the Page"|`String` - the actual title tag content of the MicroSite.  Required.|
 
 Example request:
 
