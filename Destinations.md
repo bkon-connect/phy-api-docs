@@ -63,7 +63,7 @@ Parameters that can be passed up:
 |"url"|"https://www.google.com"|`String` - Required.|
 |"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional.  See [CoverCard](https://github.com/bkon-connect/phy-api-docs/wiki/CoverCards)™ API docs for more options|
 |"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
-|"tapAction"|<pre>{<br> "actionType": "Call",<br> "to": "555-867-5309"</br>}</pre>|`Object` - Optional.  See [Tap Action API docs](https://github.com/bkon-connect/phy-api-docs/wiki/Tap-Actions) for more options|
+|"tapAction"|<pre>{<br> "actionType": "Call",<br> "to": "555-867-5309"</br>}</pre>|`Object` - Optional.  See [Tap Actions API docs](https://github.com/bkon-connect/phy-api-docs/wiki/Tap-Actions) for more options|
 |"tapActionActive"|true|`Boolean` - defaults to `false`.  Optional.|
 |"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`|
 
