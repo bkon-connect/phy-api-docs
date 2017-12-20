@@ -1,4 +1,4 @@
-For access to the `/api/v2/events` endpoint you must be [Authenticated](https://github.com/bkon-connect/phy-api-docs/wiki/Authentication)
+For access to the `/api/v2/events` endpoint you must be [Authenticated](Authentication.md)
 
 #### GET `/api/v2/events`
 
@@ -90,7 +90,7 @@ Arguments:
 |:---:|:---|:---:|
 |"name"|"Name of event"|`String` - Optional but Recomended|
 |"redirectUrl"|"https://www.google.com"|`String` - defaults to 'https://phy.net/setup'. Required.|
-|"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional. See CoverCard™ (also known as MetaMessage) API docs for more options|
+|"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional. See [CoverCards API docs](CoverCards.md) for more options|
 |"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
 |"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`|
 |"start"|\["2016-05-15", "09:00"\]|`Array` of `String` items - takes a format of \['yyyy-mm-dd', 'hh:mm'\].  Required.|
@@ -153,7 +153,7 @@ Arguments
 |:---:|:---|:---:|
 |"name"|"Name of event"|`String` - Optional but Highly Recommended.|
 |"redirectUrl"|"https://www.google.com"|`String` - defaults to 'https://phy.net/setup'. Required.|
-|"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional. See CoverCard™ (also known as MetaMessage) API docs for more options|
+|"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional. See [CoverCards aPI docs](CoverCards.md) for more options|
 |"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
 |"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`. Optional after set once.|
 |"start"|\["2016-05-15", "09:00"\]|`Array` of `String` items - takes a format of \['yyyy-mm-dd', 'hh:mm'\]. Required.|
