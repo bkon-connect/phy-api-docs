@@ -1,4 +1,4 @@
-# API Documentation for PHY.net
+# API Documentation for Phy Platform
 
 Our RESTful API includes technical documentation and SDKs for nearly every platform. Developer Control is available as an upgrade with [Professional plans](https://www.phy.net/pricing#compare-pricing).
 
