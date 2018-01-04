@@ -14,14 +14,11 @@ The index endpoint that returns `current` and `future` events.  Example payload:
       "stop": "2016-11-29T10:00:00.000Z",
       'notes": "Black Friday second floor",
       "timezone": "UTC",
-      "destination": "580fb6a05e197e010019eeb1",
-      "metaMessageActive": false,
+      "destinations": ["580fb6a05e197e010019eeb1"],
       "disabled": false,
       "beacons": [
       "7FBDBb"
-      ],
-      "proximity": 2,
-      "redirectUrl": "http://www.theblackfriday.com/dollar-general-blackfriday.shtml"
+      ]
     }
   ],
   "future": [
@@ -32,14 +29,11 @@ The index endpoint that returns `current` and `future` events.  Example payload:
       "stop": "2016-12-25T18:00:00.000Z",
       "notes": "Christmas event, second floor",
       "timezone": "UTC",
-      "destination": "580fc3e75e197e010019ef5b",
-      "metaMessageActive": false,
+      "destinations": ["580fc3e75e197e010019ef5b"],
       "disabled": false,
       "beacons": [
       "7FBDBb"
-      ],
-      "proximity": 2,
-      "redirectUrl": "http://www.dollargeneral.com/category/index.jsp?categoryId=15452376"
+      ]
     }
   ]
 }
@@ -57,26 +51,18 @@ Example payload:
   "name": "Christmas Specials",
   "start": "2016-12-01T10:00:00.000Z",
   "stop": "2016-12-25T18:00:00.000Z",
-  "redirectUrl": "http://www.dollargeneral.com/category/index.jsp?categoryId=15452376"
-  "proximity": 2,
   "beacons": <array of populated beacon objects>,
   "timezone": "UTC",
-    "destination": {
-        "_id": "580fb6a05e197e010019eeb1",
-        "updatedAt": "2016-10-27T16:25:34.373Z",
-        "createdAt": "2016-10-25T19:46:40.992Z",
-        "createdBy": 749,
-        "account": 001,
-        "notes": "example",
-        "url": "http://www.dollargeneral.com/category/example",
-        "metaMessage": "580fb6a05e197e010019eeb2",
-        "__v": 0,
-        "proximity": 2,
-        "micrositeActive": false,
-        "tapActionActive": false,
-        "metaMessageActive": true,
-        "name": "micro-event"
-    }
+  "destinations": [{
+      "_id": "580fb6a05e197e010019eeb1",
+      "updatedAt": "2016-10-27T16:25:34.373Z",
+      "createdAt": "2016-10-25T19:46:40.992Z",
+      "createdBy": 749,
+      "account": 001,
+      "notes": "example",
+      "metaMessage": "580fb6a05e197e010019eeb2",
+      "name": "micro-event"
+  }]
 }
 ```
 
@@ -89,15 +75,11 @@ Arguments:
 |Parameter|Example|Notes|
 |:---:|:---|:---:|
 |"name"|"Name of event"|`String` - Optional but Recomended|
-|"redirectUrl"|"https://www.google.com"|`String` - defaults to 'https://phy.net/setup'. Required.|
-|"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional. See [CoverCards API docs](CoverCards.md) for more options|
-|"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
-|"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`|
 |"start"|\["2016-05-15", "09:00"\]|`Array` of `String` items - takes a format of \['yyyy-mm-dd', 'hh:mm'\].  Required.|
 |"stop"|\["2016-05-16", "09:00"\]|`Array` of `String` items - takes a format of \['yyyy-mm-dd', 'hh:mm'\].  Required.|
 |"timezone"|"America/Los_Angeles"|`String` - Defaults to UTC. Required.  For options see the [list of TZ database times zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) and use the `TZ` column|
 |"beacons"|\["123test", "456test"\]|`Array` of `String` items - requires an array of Beacon IDs.  Required.|
-|"destination"|"43951ajdsflka3241"|`String` (technically a Mongo ObjectId). Id of a destination to bind to this event.  Optional.|
+|"destinations"|["43951ajdsflka3241"]|`Array` of `String` items (technically a Mongo ObjectId). Id of a destination to bind to this event.  Optional.|
 
 Example Payload without `Meta Message`:
 ```
@@ -106,30 +88,10 @@ Example Payload without `Meta Message`:
   "name":"My awesome api event without MM",
   "start":"2016-09-01T12:00:00.000Z",
   "stop":"2016-09-02T12:00:00.000Z",
-  "redirectUrl":"https://google.com",
   "proximity":2,
   "timezone":"America/Los_Angeles",
+  "destinations": ["5727baba2095629e622c2913"],
   "beacons":["4c92QZ"]
-}
-```
-
-Example Payload with `Meta Message`:
-```
-{
-  "_id":"57644fd37fcce5d8838b30b9",
-  "name":"My awesome api event",
-  "start":"2016-09-01T12:00:00.000Z",
-  "stop":"2016-09-02T12:00:00.000Z",
-  "redirectUrl":"https://google.com",
-  "proximity":2,
-  "beacons":["4c92QZ"],
-  "timezone":"America/Los_Angeles",
-  "metaMessage":{
-    "_id":"57644fd37fcce5d8838b30ba",
-    "title":"My awesome api event mm title",
-    "description":"see title"
-  },
-  "metaMessageActive":true
 }
 ```
 
@@ -143,8 +105,6 @@ Additionally, in order to update an event, ALL update requests must be sent with
 * a start and stop time in an array date pair form
 * a timezone region (to retain accuracy)
 
-If you want to update a `Meta Message` you must pass through both `metaMessageActive` AND `metaMessage` properties.
-
 (see below for format)
 
 Arguments
@@ -152,15 +112,11 @@ Arguments
 |Parameter|Example|Notes|
 |:---:|:---|:---:|
 |"name"|"Name of event"|`String` - Optional but Highly Recommended.|
-|"redirectUrl"|"https://www.google.com"|`String` - defaults to 'https://phy.net/setup'. Required.|
-|"metaMessage"|<pre>{<br> "title": "Landing on Google",<br> "description": "a custom description of google"<br>}</pre>|`Object` - Optional. See [CoverCards aPI docs](CoverCards.md) for more options|
-|"metaMessageActive"|true|`Boolean` - defaults to `false`.  Optional.|
-|"proximity"|2|`Int` - defaults to `2`.  Can be `-1`, `0`, `1`, `2`. Optional after set once.|
 |"start"|\["2016-05-15", "09:00"\]|`Array` of `String` items - takes a format of \['yyyy-mm-dd', 'hh:mm'\]. Required.|
 |"stop"|\["2016-05-16", "09:00"\]|`Array` of `String` items - takes a format of \['yyyy-mm-dd', 'hh:mm'\].  Required.|
 |"timezone"|"America/Los_Angeles"|`String` - Defaults to UTC. Required.  For options use the [list of TZ database times zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) and use the `TZ` column|
-|"beacons"|\["123test", "456test"\]|`Array` of `String` items - takes an array of Beacon IDs.  Required.|
-|"destination"|"43951ajdsflka3241"|`String` (technically a Mongo ObjectId).  ID of a destination to bind to this event. Optional.|
+|"beacons"|\["123test", "456test"\]|`Array` of `String` items - takes an array of PhyIDs.  Required.|
+|"destinations"|["43951ajdsflka3241"]|`Array` of `String` items (technically a Mongo ObjectId).  ID of a destination to bind to this event. Optional.|
 
 Example payload of updating an `Event` without a `MetaMessage`:
 ```
@@ -169,29 +125,9 @@ Example payload of updating an `Event` without a `MetaMessage`:
   "name":"My awesome api event without MM updated without MM",
   "start":"2016-09-01T19:00:00.000Z",
   "stop":"2016-09-02T19:00:00.000Z",
-  "redirectUrl":"https://google.com",
-  "proximity":2,
+  "destinations": ["5727baba2095629e622c2913"]
   "beacons":["3sjpaF"],
   "timezone":"America/Los_Angeles"
-}
-```
-Example payload of updating an `Event` with a `MetaMessage`:
-```
-{
-  "_id":"576450837fcce5d8838b30c2",
-  "name":"My awesome api event without MM updated with MM",
-  "start":"2016-09-01T19:00:00.000Z",
-  "stop":"2016-09-02T19:00:00.000Z",
-  "redirectUrl":"https://google.com",
-  "proximity":2,
-  "beacons":["3sjpaF"],
-  "timezone":"America/Los_Angeles",
-  "metaMessage":{
-    "_id":"576453167fcce5d8838b30c9",
-    "title":"My awesome api event mm title that previously had none",
-    "description":"see title"
-  },
-  "metaMessageActive":true
 }
 ```
 
