@@ -33,7 +33,7 @@ Example payload:
 |Parameter|Example|Notes|
 |:---:|:---:|:---:|
 |"actionType"|"Microsite"|`String` - Required.|
-|"to"|"5a258541c0c4950100dae225"|`ObjectId` of `Microsite` - Required. See [MicroSite API docs](MicroSites.md)|
+|"microsite"|"5a258541c0c4950100dae225"|`ObjectId` of `Microsite` - Required. See [MicroSite API docs](MicroSites.md)|
 
 Example payload:
 
