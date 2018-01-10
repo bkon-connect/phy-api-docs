@@ -166,7 +166,7 @@ Update endpoint for beacons.  Parameters are:
 |Parameter|Example|Notes|
 |:---:|:---|:---:|
 |"desc"|"Description of the beacon"|`String` - Optional.|
-|"destinations"|["aefoiawe123"]|`Array` of `ObjectId`s of `Destination` instance - Optional.|
+|"destinations"|["5a563a0002070101009f426d"]|`Array` of `ObjectId`s of `Destination` instance - Optional.|
 |"disabled"|true|`Boolean` defaults to false.  Optional.|
 |"install"|<pre>{<br>"install":<br>{<br> "brand": "-1",<br> "details": "",<br> "locationAddress": "",<br> "locationName": "",<br> "locationType": "fixed",<br> "photo": {<br>  "close": "",<br>  "far": "",<br>  "immediate": ""<br>  }<br> }<br>}</pre>|All except `photo` are type `String` including the `photo` properties.  All are Optional.|
 |"urlTags"|<pre>{<br>"custom": [<br> {<br>  "key": "",<br>  "value: "",<br>  "active": false<br>  }<br> ]<br> "phyTimeActive": false,<br> "phyIDActive": false<br>}</pre>|`custom` is an array of objects which contain:<br>(a) "key" - `String` optional<br>(b) "value" - `String` optional<br>(c) "active" - `Boolean` defaults to false.  Optional<br><br>"phyTimeActive" - `Boolean` defaults to false<br>"phyIDActive" - `Boolean` defaults to false|
