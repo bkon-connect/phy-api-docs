@@ -45,9 +45,8 @@ Index endpoint for returning all beacons that belong to the user's account.  Exa
         "name" : "Front Door",
         "thirdParty" : false,
         "proximity" : 2,
-        "redirectUrl" : "https://bkon.com/next-steps/",
         "folder": ObjectId("example"),
-        "destination" : ObjectId("example"),
+        "destination" : [ObjectId("example")],
         "batteryLevel" : 0.1,
         "batteryVoltage" : 2.05,
         "advertisingRate" : 700,
@@ -62,9 +61,7 @@ Index endpoint for returning all beacons that belong to the user's account.  Exa
         "uidNamespace" : "C48C6716C550CE582A22",
         "uuid" : "C48C6716-193F-477B-B73A-C550CE582A22"
         "major": 2000,
-        "minor": 5823,
-        "metaMessage": ObjectId("example"),
-        "metaMessageActive": true
+        "minor": 5823
     },
     ...
 ]
@@ -130,9 +127,8 @@ Show endpoint for returning a fully populated `Beacon`.  Example payload:
         "name" : "Front Door",
         "thirdParty" : false,
         "proximity" : 2,
-        "redirectUrl" : "https://bkon.com/next-steps/",
         "folder": "ObjectId(example)",
-        "destination" : {
+        "destinations" : [{
             "_id": "5727baba2095629e622c2913",
             "notes": "An individual destination with a meta message",
             "url": "http://google.com",
@@ -142,9 +138,8 @@ Show endpoint for returning a fully populated `Beacon`.  Example payload:
                 "description": "My Description"
             },
             "proximity": 2,
-            "metaMessageActive": true,
             "name": "Destination woohoo"
-        },
+        }],
         "batteryLevel" : 0.1,
         "batteryVoltage" : 2.05,
         "advertisingRate" : 700,
@@ -159,15 +154,7 @@ Show endpoint for returning a fully populated `Beacon`.  Example payload:
         "uidNamespace" : "C48C6716C550CE582A22",
         "uuid" : "C48C6716-193F-477B-B73A-C550CE582A22",
         "major": 2000,
-        "minor": 5823,
-        "metaMessage": {
-            "_id": "573a372ba78feff835169137",
-            "title": "My Title",
-            "description": "My Description",
-            "faviconUrl": "http://example.com/image",
-            "imageUrl": "http://example.com/image"
-        },
-        "metaMessageActive": true
+        "minor": 5823
     }
 ]
 ```
@@ -178,14 +165,12 @@ Update endpoint for beacons.  Parameters are:
 
 |Parameter|Example|Notes|
 |:---:|:---|:---:|
-|"redirectUrl"|"https://google.com"|`String` - Required.|
 |"desc"|"Description of the beacon"|`String` - Optional.|
-|"destination"|"aefoiawe123"|`ObjectId` of `Destination` instance - Optional.|
+|"destinations"|["5a563a0002070101009f426d"]|`Array` of `ObjectId`s of `Destination` instance - Optional.|
 |"disabled"|true|`Boolean` defaults to false.  Optional.|
 |"install"|<pre>{<br>"install":<br>{<br> "brand": "-1",<br> "details": "",<br> "locationAddress": "",<br> "locationName": "",<br> "locationType": "fixed",<br> "photo": {<br>  "close": "",<br>  "far": "",<br>  "immediate": ""<br>  }<br> }<br>}</pre>|All except `photo` are type `String` including the `photo` properties.  All are Optional.|
 |"urlTags"|<pre>{<br>"custom": [<br> {<br>  "key": "",<br>  "value: "",<br>  "active": false<br>  }<br> ]<br> "phyTimeActive": false,<br> "phyIDActive": false<br>}</pre>|`custom` is an array of objects which contain:<br>(a) "key" - `String` optional<br>(b) "value" - `String` optional<br>(c) "active" - `Boolean` defaults to false.  Optional<br><br>"phyTimeActive" - `Boolean` defaults to false<br>"phyIDActive" - `Boolean` defaults to false|
-|"metaMessageActive"|true|`Boolean` - Optional.|
-|"metaMessage"|<pre>{<br>  "title": "example",<br>  "description": "example",<br>  "faviconUrl": "https://url.to.image",<br>  "imageUrl": "https://url.to.image"<br>}</pre>|See [CoverCards API](CoverCards.md) for properties and description|
+
 
 Upon update, the fully populated, updated document will be returned.  See `GET /api/v2/beacons/:id` example payload for example return.
 
@@ -201,14 +186,11 @@ Parameter Options:
 
 |Parameter|Example|Notes|
 |:---:|:---|:---:|
-|"redirectUrl"|"https://google.com"|`String` - Required.|
 |"desc"|"Description of the beacon"|`String` - Optional.|
-|"destination"|"aefoiawe123"|`ObjectId` of `Destination` instance - Optional.|
+|"destinations"|["5a563a0002070101009f426d"]|`Array` of `ObjectId`s of `Destination` instance - Optional.|
 |"disabled"|true|`Boolean` defaults to false.  Optional.|
 |"install"|<pre>{<br>"brand": "BKON",<br>"details": "",<br>"locationAddress": "",<br>"locationName": "jhggjhk",<br>"source": "Alk",<br>"photo": {<br> "close": "",<br> "far": "",<br> "immediate": ""<br> } <br>}</pre>|All except `photo` are type `String` including the `photo` properties.  All are Optional.|
 |"urlTags"|<pre>{<br>"custom": [<br> {<br>  "key": "",<br>  "value: "",<br>  "active": false<br> }<br>],<br> "phyTimeActive": false,<br> "phyIDActive": false<br>}</pre>|`custom` is an array of objects which contain:<br><br>(a) "key" - `String` optional<br>(b) "value" - `String` optional<br>(c) "active" - Boolean defaults to false.  Optional<br><br>"phyTimeActive" - `Boolean` defaults to false<br>"phyIDActive" - `Boolean` defaults to false|
-|"metaMessageActive"|true|Boolean - Optional.|
-|"metaMessage"|<pre>{<br> "title": "example",<br> "description": "example",<br> "faviconUrl": "https://url.to.image",<br> "imageUrl": "https://url.to.image"<br>}<br></pre>|See [CoverCards API](CoverCards.md) docs for properties and description|
 
 Example response:
 

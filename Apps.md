@@ -155,11 +155,10 @@ Show endpoint for the relationship between a beacon and an app. Includes the bea
     "authKey": "C7E3C1731684B7A350AB7D8916ED97B2",
     "__v": 2,
     "account_id": 509,
-    "destination": "570e83d90b37ab737ca13de2",
+    "destinations": ["570e83d90b37ab737ca13de2"],
     "batteryLevel": 0.94,
     "batteryVoltage": 2.9749999999999996,
     "touchpointType": "Beacon",
-    "redirectUrl": "https://bkon.com/next-steps/",
     "name": "Checkout #1",
     "disabled": false,
     "install": {
@@ -192,8 +191,6 @@ Show endpoint for the relationship between a beacon and an app. Includes the bea
         }
       ]
     },
-    "metaMessage": null,
-    "metaMessageActive": false,
     "eidScalar": 5,
     "uuid": "C48C6716-193F-477B-B73A-C550CE582A22",
     "delimiter": "?",
@@ -226,7 +223,7 @@ Update endpoint for beacons.  Parameters are:
 |:---:|:---:|:---:|
 |"url"|"https://google.com"|`String` - Required.|
 |"notes"|"Description of the beacon"|`String` - Optional.|
-|"destination"|"aefoiawe123"|`ObjectId` of `Destination` instance - Optional.|
+|"destinations"|["aefoiawe123"]|`Array` of `ObjectId`s of `Destination` instance - Optional.|
 |"deactivated"|true|`Boolean` - Optional. If false, the beacon will follow alternate redirection rules as defined here.|
 |"persistent"|true|`Boolean` - Optional. If true, the beacon will always show within the app|
 |"persistentPosition"|true|`String` - Options: 'above', 'below'. Determines whether a persistent touchpoint shows above or below non-persistent touchpoints.|

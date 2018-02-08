@@ -1,16 +1,56 @@
-The `Tap Actions` resource is special in the sense that it is only created/read/updated/destroyed through other resources.  Currently, this is restricted to `Destination` resources.
+The `TapAction` resource is special in the sense that it is only created/read/updated/destroyed through a `Destination` resource.
 
 The workflow to create a `Destination` on all future resources is done by passing up:
 
-(1) `tapActionActive: <boolean>` to flag if we should have it on or off
-
-(2) `tapAction: <object>` an object of attributes to put on the `Tap Action`
+`tapAction: <object>` an object of attributes to put on the `Tap Action`
 
 When updating a `Destination` with a `TapAction` that does not currently have one, a new `Tap Action` will be created and bound.
 
-A `Tap Action` must have a valid `actionType` to be saved and set. There are currently four types of `Tap Actions`
+A `TapAction` must have a valid `actionType` to be saved and set. There are currently six types of `TapActions`
 
-### Tap To Call
+### Redirect
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"actionType"|"Redirect"|`String` - Required.|
+|"to"|"https://www.phy.net"|`String` - Required.|
+
+Example payload:
+
+```
+{
+  "name": "Tap Action Demo",
+  "metaMessage": {
+    "title": "Redirect",
+  },
+  "tapAction": {
+    "actionType": "Redirect",
+    "to": "https://www.phy.net"
+  }
+}
+```
+
+### MicroSite
+|Parameter|Example|Notes|
+|:---:|:---:|:---:|
+|"actionType"|"Microsite"|`String` - Required.|
+|"microsite"|"5a258541c0c4950100dae225"|`ObjectId` of `Microsite` - Required. See [MicroSite API docs](MicroSites.md)|
+
+Example payload:
+
+```
+{
+  "name": "Tap Action Demo",
+  "metaMessage": {
+    "title": "Microsite",
+  },
+  "tapAction": {
+    "actionType": "Microsite",
+    "microsite": "5a258541c0c4950100dae225"
+  }
+}
+```
+
+### Call
 |Parameter|Example|Notes|
 |:---:|:---:|:---:|
 |"actionType"|"Call"|`String` - Required.|
@@ -25,12 +65,10 @@ Example payload:
     "title": "Call Jenny",
     "description": "Tap to call Jenny"
   },
-  "metaMessageActive": true,
   "tapAction": {
     "actionType": "Call",
     "to": "8675309"
-  },
-  "tapActionActive": true
+  }
 }
 ```
 
@@ -40,14 +78,11 @@ Example response:
 {
     "_id": "591da169402f890100f5ce8a",
     "notes": "new destination for testing",
-    "url": "http://example.com",
     "metaMessage": {
         "_id": "591da169402f890100f5ce8b",
         "title": "Call Jenny",
         "description": "Tap to call Jenny"
     },
-    "metaMessageActive": true,
-    "proximity": 2,
     "name": "Tap Action Demo",
     "tapAction": {
         "_id": "5a258541c0c4950100dae225",
@@ -55,14 +90,13 @@ Example response:
         "createdAt": "2017-12-04T17:26:25.000Z",
         "to": "8675309",
         "actionType": "Call"
-    },
-    "tapActionActive": true
+    }
 }
 ```
 <br>
 
 
-### Tap To Email
+### Email
 |Parameter|Example|Notes|
 |:---:|:---:|:---:|
 |"actionType"|"Email"|`String` - Required.|
@@ -82,7 +116,6 @@ Example payload:
     "title": "Email us",
     "description": "Tap to send an email"
   },
-  "metaMessageActive": true,
   "tapAction": {
     "actionType": "Email",
     "to": "to.tim@test.com",
@@ -90,14 +123,13 @@ Example payload:
     "bcc": "blind.copied.carol@test.com",
     "subject": "Sample Subject",
     "body": "Bountiful Body of Beauty"
-  },
-  "tapActionActive": true
+  }
 }
 ```
 
 
 
-### Tap To Text (SMS)
+### Text (SMS)
 |Parameter|Example|Notes|
 |:---:|:---:|:---:|
 |"actionType"|"Sms"|`String` - Required.|
@@ -113,11 +145,9 @@ Example payload:
     "title": "Text us",
     "description": "Tap to send an text message"
   },
-  "metaMessageActive": true,
   "tapAction": {
    "actionType": "Sms", "to": "111-111-1111", "message": "Meaningful Message"
-  },
-  "tapActionActive": true
+  }
 }
 ```
 
